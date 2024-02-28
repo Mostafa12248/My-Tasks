@@ -1,0 +1,131 @@
+body {
+  background-color: hsl(235, 18%, 26%);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* *************************** div ******************************* */
+.parent {
+  padding: 40px 20px;
+  width: 650px;
+  height: 450px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+
+.left {
+  width: 98%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.right {
+  width: 98%;
+  height: 100%;
+}
+
+.top {
+  line-height: 20px;
+}
+
+.center {
+  margin-bottom: 20px;
+  line-height: 3px;
+}
+
+.ok {
+  background-image: linear-gradient(
+    to right,
+    mediumvioletred,
+    hsl(4, 100%, 67%)
+  );
+  width: 290px;
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  outline: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ************************************************************ */
+
+/************************ global elements ***********************/
+h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 50px;
+}
+
+p {
+  font-size: 14px;
+  color: hsl(234, 29%, 20%);
+  display: inline-block;
+  transform: translateY(-5px);
+}
+
+span {
+  padding: 10px 10px 0px 0px;
+  display: inline-block;
+}
+
+/* ************************************************************* */
+
+.left .end form label {
+  font-size: 14px;
+  color: hsl(234, 29%, 20%);
+}
+
+/******************** global elements with div ******************/
+
+.left .end form input {
+  width: 290px;
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  outline: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.right img {
+  width: 325px;
+  height: 450px;
+}
+
+.ok a {
+  text-decoration: none;
+  color: white;
+}
+
+.ok:hover {
+  cursor: pointer;
+}
+/* ***************************************************** */
+
+/* media  */
+@media (max-width: 375px) {
+  .parent {
+    padding-left: 30px;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: 350px;
+    height: 1000px;
+  }
+
+  .right {
+    grid-row: 1/2;
+  }
+
+  .left {
+    grid-row: 2/3;
+  }
+  .ok {
+    background-color: hsl(234, 29%, 20%);
+  }
+}
+/* ********************************************* */

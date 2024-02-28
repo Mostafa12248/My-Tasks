@@ -1,0 +1,311 @@
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 100%;
+  padding: 30px 0px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*************** div in the project *****************/
+
+.div-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  justify-content: space-evenly;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.div-2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0px 179px;
+  margin-bottom: 200px;
+}
+
+.div-3 {
+  grid-column: 1/2;
+  padding: 0px 179px;
+}
+
+.div-4 {
+  grid-column: 2/3;
+  padding-left: 120px;
+}
+
+.div-3-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.div-5 {
+  padding: 40px 70px;
+  position: relative;
+}
+
+.div-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0px;
+}
+
+.div-7 {
+  width: 100%;
+  height: 200px;
+  background-color: hsl(12, 88%, 59%);
+  padding: 0px 70px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.div-8 {
+  width: 100%;
+  height: 200px;
+  padding: 0px 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(233, 12%, 13%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*******************************************************/
+
+/*******************sections in the project*************************/
+.section-1,
+.section-2,
+.section-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.section-4 {
+  grid-column: 1/2;
+}
+
+.section-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-7 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.section-8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-9 {
+  background-color: hsl(13, 100%, 96%);
+  width: calc(100% / 3.5);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+.section-10 {
+  text-align: center;
+  padding: 10px;
+}
+.section-11 {
+  grid-column: 1/2;
+}
+
+.section-12 {
+  grid-column: 2/3;
+}
+
+.section-13 {
+  grid-column: 1/2;
+}
+
+.section-14 {
+  grid-column: 1/2;
+}
+
+.section-15 {
+  grid-column: 2/3;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.a-section-1 {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+}
+
+.a-section-2 {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+}
+
+.section-16 {
+  grid-column: 3/4;
+  transform: translateY(40px);
+}
+/* ******************************************************* */
+
+/* **********************global elements****************** */
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+h1 {
+  color: hsl(228, 39%, 23%);
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+h3 {
+  color: hsl(228, 39%, 23%);
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  opacity: 0.6;
+}
+
+span {
+  margin-right: 80px;
+  position: relative;
+  color: white;
+}
+
+span::before {
+  content: " ";
+  position: absolute;
+  background-color: hsl(12, 88%, 59%);
+  z-index: -1;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  left: -18px;
+  top: -5px;
+}
+
+/* *************************************************************** */
+
+/* **********************div with elements******************** */
+
+.picture img {
+  overflow: hidden;
+  width: 650px;
+  position: absolute;
+  right: 0px;
+  transform: translate(50px, -200px);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.picture-1 img {
+  overflow: hidden;
+  width: 650px;
+  position: absolute;
+  background-color: hsl(0, 0%, 98%);
+  transform: translate(-600px, 100px);
+}
+
+.section-3 a {
+  background-color: hsl(12, 88%, 59%);
+  padding: 10px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px hsl(12, 88%, 59%);
+}
+
+.section-5 img {
+  width: 350px;
+  grid-column: 2/3;
+  transform: translateX(50px);
+}
+
+.div-4 p {
+  padding-left: 105px;
+}
+
+.section-9 img {
+  transform: translate(160px, -25px);
+  width: 70px;
+  grid-row: 1/2;
+}
+
+.section-9 p {
+  grid-row: 2/3;
+  align-items: center;
+}
+
+.section-11 img {
+  width: 500px;
+  transform: translateY(-200px);
+  opacity: 0.1;
+}
+
+.section-11 h1 {
+  color: white;
+  padding-top: 20px;
+}
+
+.section-12 img {
+  width: 500px;
+  transform: translate(500px, -400px);
+  opacity: 0.1;
+}
+
+.section-12 a {
+  background-color: white;
+  transform: translate(90px, 80px);
+  color: hsl(12, 88%, 59%);
+}
+
+.section-13 img {
+  padding: 40px 0px;
+}
+.section-14 a {
+  word-spacing: 10px;
+}
+
+.section-15 a {
+  color: white;
+}
+
+.section-16 input {
+  width: 200px;
+  padding: 15px 10px;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+}
+
+.section-16 label span {
+  transform: translateX(70px);
+  position: relative;
+}
+
+/* **************************************************************** */
