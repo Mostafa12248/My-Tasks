@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>inner page</title>
     <meta
       name="space"
       content="space page to known more information about space and communicate with them"
@@ -8,22 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 
-    <title>inner-page-Destination</title>
-    <link rel="stylesheet" href="/My-GitHub/My-Tasks/space/space.css" />
-
-    <link
-      rel="icon"
-      href="/css_project/challinges/space-tourism-website-main/space-tourism-website-main/starter-code/assets/favicon-32x32.png"
-      type="img/png"
-    />
-
-    <base
-      href="/css_project/challinges/space-tourism-website-main/space-tourism-website-main/starter-code/assets/shared/"
-    />
-    <!-- <base
-      href="/css_project/challinges/space-tourism-website-main/space-tourism-website-main/starter-code/assets/home/"
-    /> -->
-
+    <!-- **********************links************************** -->
+    <link rel="stylesheet" href="space.css" />
+    <link rel="stylesheet" href="inner-page.css" />
+    <link rel="icon" href="favicon-32x32.png" type="img/png" />
     <!-- font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,15 +26,25 @@
       href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khojki:wght@400..700&display=swap"
+      rel="stylesheet"
     />
-    <!-- font  -->
+    <!-- ************************************************** -->
+
+    <!-- ********************image shortcut************* -->
+    <base href="assets/destination/" />
+    <base href="shared/" />
+    <!-- ************************************************** -->
   </head>
 
   <body>
     <div class="main">
-      <div class="space-nav">
+      <div class="nav-par">
         <img src="logo.svg" alt="logo" title="icon" />
-
         <div class="links">
           <a href="#"><span>00</span>HOME</a>
           <a href="#"><span>01</span>DESTINATION</a>
@@ -53,8 +52,42 @@
           <a href="#"><span>03</span>TECHNOLOGY</a>
         </div>
       </div>
-      <div class="section-1">
-        <img src="" alt="" />
+
+      <div class="description">
+        <p><span>01</span> Pick Your destination</p>
+      </div>
+
+      <div class="last">
+        <div class="left">
+          <img src="image-mars.png" alt="" />
+        </div>
+
+        <div class="right">
+          <div class="top">
+            <a href="#">MOON</a>
+            <a href="#">MARS</a>
+            <a href="#">EUROPA</a>
+            <a href="#">TITAN</a>
+          </div>
+          <h1>Mars</h1>
+          <p>
+            Don't forget to pack your hiking boots. You'll need them<br />
+            to tackle Olympus Mons, the tallest planetary mountain in<br />
+            our solar system. It's two and a half times the size of Everest.
+          </p>
+          <hr />
+          <div class="end">
+            <div class="distance">
+              <p>AVG.DISTANCE</p>
+              <p class="p1">225MIL.KM</p>
+            </div>
+
+            <div class="travel">
+              <p>EST.TRAVEL TIME</p>
+              <p class="p1">9 Months</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
