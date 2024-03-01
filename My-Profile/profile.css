@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+/* *******************head elements ************************/
+header {
+  background-color: rgb(255, 68, 0);
+  width: 100%;
+  min-height: 0.625em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 150px;
+  position: fixed;
+  z-index: 25;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+}
+section {
+  padding: 100px 150px;
+  min-height: 3.125em;
+}
+
+header .nav-par a {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  margin-right: 50px;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+footer {
+  padding: 100px 150px;
+  min-height: 3.125em;
+}
+
+.nav-par a:hover {
+  display: inline-block;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ********************************************************** */
+
+/* **********************Section about********************** */
+
+.about {
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #221f32;
+}
+
+.about .image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px dashed orangered;
+  margin-bottom: 30px;
+}
+
+.about h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.about span {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 600;
+  color: orangered;
+}
+
+.about h3 {
+  background-color: orangered;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 15px;
+  width: 300px;
+  margin-bottom: 20px;
+  transition: transform 0.7s;
+}
+
+.about h3:hover {
+  transform: scale(1.1);
+}
+
+.about h3 a {
+  text-decoration: none;
+  color: #221f32;
+}
+
+.about .links a {
+  margin-right: 10px;
+  font-size: 28px;
+  color: white;
+}
+
+/* ********************************************************** */
+
+/* **********************Section skill********************** */
+
+.skills {
+  background-color: rgb(235, 216, 216);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.skills h4 {
+  padding: 5px 0px;
+}
+
+.my-skills span h4 {
+  font-size: 20px;
+  color: orangered;
+}
+
+.skills .my-skills {
+  min-height: 0.313em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px 5px;
+  width: 68.75em;
+  margin: 0px auto;
+}
+.title {
+  margin-bottom: 50px;
+  display: flex;
+  font-size: 1.875em;
+  justify-content: center;
+  font-weight: 800;
+  color: orangered;
+}
+
+.my-skills {
+  display: flex;
+  justify-content: center;
+}
+
+.my-skills span {
+  color: orangered;
+}
+
+.my-skills .card {
+  min-height: 0.625em;
+  padding: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px orangered;
+  margin-left: 10px;
+  transition: transform 0.5s, filter 1s;
+}
+
+.my-skills .card:hover {
+  transform: scale(1.1);
+}
+
+.my-skills .card-blur:hover {
+  filter: none;
+}
+
+.my-skills .card-blur-2:hover {
+  filter: none;
+}
+
+.my-skills .icon {
+  font-size: 70px;
+  color: #221f32;
+  margin-bottom: 10px;
+}
+
+.my-skills .card-blur {
+  filter: blur(2px);
+}
+
+.my-skills .card-blur-2 {
+  filter: blur(3px);
+}
+
+/* ********************************************************** */
+
+/* ***************************Animation************************ */
+
+.animation {
+  width: 20px;
+  height: 20px;
+  border: 5px orangered dotted;
+  animation: rotate linear 2s infinite;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wait {
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.animation-1 div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: orangered;
+  display: inline-block;
+  animation: wait linear infinite 0.7s alternate-reverse;
+}
+
+.animation-1 .two {
+  animation-delay: 0.5s;
+}
+
+.animation-1 .three {
+  animation-delay: 1s;
+}
+
+/* ********************************************************** */
+
+/* **********************Section project********************** */
+
+.my-projects {
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #221f32;
+}
+
+.my-projects a {
+  text-align: center;
+  text-decoration: none;
+  color: orangered;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+}
+
+.about-me .card {
+  min-height: 0.625em;
+  padding: 20px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px orangered;
+  margin-left: 10px;
+  transition: transform 0.5s;
+}
+
+.about-me .card:hover {
+  transform: scale(1.1);
+}
+/* ********************************************************** */

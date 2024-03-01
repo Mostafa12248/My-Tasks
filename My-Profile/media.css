@@ -1,0 +1,77 @@
+@media (max-width: 414px) {
+  header {
+    width: 415px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .nav-par {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 70px;
+    margin-top: 15px;
+    overflow: hidden;
+  }
+
+  section {
+    padding: 50px 30px;
+    overflow: hidden;
+  }
+
+  .about .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .about .image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+  .about h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about span {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .my-skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    transform: translateX(-380px);
+  }
+}
