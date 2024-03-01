@@ -1,0 +1,147 @@
+body {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+:root {
+  --family-font: "Rubik", sans-serif;
+  --background-color: hsl(226, 43%, 10%);
+  --main-color: hsl(235, 46%, 20%);
+  --personal-color: hsl(235, 45%, 61%);
+  --font-color: hsl(0, 0%, 100%);
+  --work-color: hsl(15, 100%, 70%);
+  --play-color: hsl(195, 74%, 62%);
+  --study-color: hsl(348, 100%, 68%);
+  --exercise-color: hsl(145, 58%, 55%);
+  --social-color: hsl(264, 64%, 52%);
+  --self-care-color: hsl(43, 84%, 65%);
+  --font-size-1: 40px;
+  --font-size-2: 18px;
+  --font-size-3: 12px;
+  --font-size-3-color: hsl(235, 45%, 61%);
+  --hover-color: hsl(236, 100%, 87%);
+}
+
+.main {
+  width: 700px;
+  height: 380px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 5px 10px;
+  font-family: var(--family-font);
+}
+
+.name {
+  width: 190px;
+  height: 250px;
+  /* position: relative; */
+  background-color: blue;
+  border-radius: 15px;
+  transform: translate(135px, 260px);
+}
+
+.name-1 {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  background-color: brown;
+  transform: translateY(190px);
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.back {
+  width: 180px;
+  height: 150px;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-30px);
+  overflow: hidden;
+}
+.main div {
+  width: 190px;
+  height: 150px;
+  background-color: var(--main-color);
+  border-radius: 15px;
+}
+
+.main div:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+.work .back {
+  background-color: var(--work-color);
+}
+
+.play .back {
+  background-color: var(--play-color);
+}
+
+.study .back {
+  background-color: var(--study-color);
+}
+
+.exercise .back {
+  background-color: var(--exercise-color);
+}
+
+.social .back {
+  background-color: var(--social-color);
+}
+
+.self-care .back {
+  background-color: var(--self-care-color);
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  transform: translateY(-10px);
+  position: absolute;
+  padding-right: 10px;
+  right: 0;
+}
+
+.top {
+  position: absolute;
+  margin-bottom: 10px;
+}
+
+.top img {
+  width: 20px;
+  height: 5px;
+  top: 35px;
+  color: var(--font-size-3-color);
+}
+
+.top img {
+  cursor: pointer;
+}
+
+p {
+  font-size: var(--font-size-2);
+  color: var(--font-color);
+  padding-left: 10px;
+  color: var(--font-color);
+}
+
+h3 {
+  font-size: var(--font-size-1);
+  margin: 0px;
+  color: var(--font-color);
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.p1 {
+  font-size: var(--font-size-3);
+  color: var(--font-color);
+  padding-left: 10px;
+  color: var(--font-size-3-color);
+  margin: 5px;
+}
