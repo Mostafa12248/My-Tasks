@@ -1,1 +1,22 @@
+@media (max-width: 415px) {
+  .nav .links,
+  .log-sign {
+    display: none;
+  }
 
+  .section-center {
+    display: contents;
+    flex-direction: column;
+  }
+
+  .right-div {
+    display: none;
+  }
+
+  .left-div {
+    align-items: center;
+  }
+  .left-div h1 {
+    font-size: 30px;
+  }
+}

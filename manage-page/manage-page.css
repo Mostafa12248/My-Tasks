@@ -309,3 +309,17 @@ span::before {
 }
 
 /* **************************************************************** */
+@media (max-width: 415px) {
+  .section-2,
+  .section-3 {
+    display: none;
+  }
+  .picture img {
+    transform: translate(300px, -250px);
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+  }
+}
