@@ -283,3 +283,15 @@ footer {
   transform: scale(1.1);
 }
 /* ********************************************************** */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #221f32;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+  border-radius: 20px;
+}
