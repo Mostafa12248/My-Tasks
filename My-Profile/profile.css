@@ -118,7 +118,11 @@ footer {
 .skills {
   background-color: rgb(235, 216, 216);
   width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
+  display: flex;
 }
 
 .skills h4 {

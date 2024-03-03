@@ -6,17 +6,20 @@
 }
 
 :root {
-  --color: hsl(237, 23%, 32%);
-  --color2: hsl(237, 17%, 21%);
-  --text-color: hsl(0, 0%, 100%);
-  --text-hover: hsl(356, 100%, 66%);
-  --main-head-color: hsl(208, 49%, 24%);
-  --text-of-head-color: hsl(207, 13%, 34%);
-  --footer-text: hsl(240, 2%, 79%);
-  --footer-background: hsl(240, 10%, 16%);
   --background-color: hsl(13, 100%, 72%);
+  --text-hover: hsl(356, 100%, 66%);
+  --font-family-ubuntu: "Ubuntu", sans-serif;
+  --font-family-overpass: "Overpass", sans-serif;
+  --text-or-main-color: hsl(0, 0%, 100%);
+  --head-color: hsl(208, 49%, 24%);
+  --footer-text: hsl(240, 2%, 79%);
+  --text-of-head-color: hsl(207, 13%, 34%);
+  --footer-background: hsl(240, 10%, 16%);
+  --content-head: hsl(237, 23%, 32%);
+  --mobile-background: hsl(237, 17%, 21%);
+  --font-size: 16px;
 }
-
+/* *******************global elements*********************** */
 section {
   padding: 20px 150px;
   min-height: 0.615em;
@@ -24,6 +27,54 @@ section {
   overflow-x: hidden;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family-ubuntu);
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-family: "Overpass", sans-serif;
+  color: var(--text-or-main-color);
+  font-size: 40px;
+  margin-bottom: -5px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  color: var(--head-color);
+  margin-bottom: -5px;
+}
+
+h3 {
+  color: var(--head-color);
+  margin-bottom: 20px;
+  font-family: "Overpass", sans-serif;
+}
+
+p {
+  line-height: 30px;
+  color: var(--text-of-head-color);
+  font-family: "Overpass", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-or-main-color);
+  font-size: var(--font-size);
+  margin: 0px 3px;
+  font-weight: 500;
+}
+
+span {
+  margin-left: 5px;
+}
+/* ************************************************** */
+/* ************************section-1****************** */
 .section-1 {
   background-color: hsl(13, 100%, 72%);
   border-radius: 0px 0px 0px 100px;
@@ -34,121 +85,77 @@ section {
   background-position: 140px -600px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 80px;
-}
-
 .left-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-color);
 }
 
 .left-header img {
   padding-right: 40px;
 }
 
-span {
-  margin-left: 5px;
-}
-
-.right-header .span1 a {
-  background-color: var(--text-color);
+.span1 a {
+  background-color: var(--text-or-main-color);
   color: var(--text-hover);
-  padding: 10px 25px;
   border-radius: 20px;
-}
-
-.right-header a {
-  padding: 0px 25px;
-  margin: 0px;
+  padding: 10px 25px;
+  font-family: var(--font-family-ubuntu);
 }
 
 .span1 a:hover {
-  background-color: hsla(356, 100%, 66%, 0.485);
+  background-color: hsla(356, 100%, 66%, 0.629);
   border-radius: 20px;
   padding: 10px 25px;
-  color: var(--text-color);
+  color: var(--text-or-main-color);
 }
 
-.section-1 .detals {
+.span2 a {
+  background-color: hsla(356, 100%, 66%, 0.629);
+  color: var(--text-or-main-color);
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-family: var(--font-family-ubuntu);
+}
+
+.span2 a:hover {
+  background-color: var(--text-or-main-color);
+  color: var(--text-hover);
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+
+.section-1 .details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: "Ubuntu", sans-serif;
+  color: var(--text-or-main-color);
 }
 
-.section-1 .detals-links {
+.details p {
+  font-family: "Overpass", sans-serif;
+  font-family: var(--font-family-overpass);
+  margin-bottom: 120px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.section-1 .details-links {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 100px;
-  margin-top: 40px;
 }
 
-.detals-links .span1 a {
-  padding: 10px 25px;
-  border-radius: 20px;
-  background-color: var(--text-color);
-  color: var(--text-hover);
+.section-1 .details-links a {
+  border: 2px solid var(--text-or-main-color);
 }
 
-.detals-links .span1 a:hover {
-  padding: 10px 25px;
-  border-radius: 20px;
-  background-color: hsla(356, 100%, 66%, 0.485);
-  color: var(--text-color);
-}
-
-.detals h1 {
-  font-size: 40px;
-  font-family: "Overpass", sans-serif;
-  color: white;
-  margin-bottom: -5px;
-}
-
-.detals p {
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 30px;
-  color: var(--text-color);
-}
-
-.section-2 h1 {
-  text-align: center;
-  color: var(--main-head-color);
-  margin-bottom: 50px;
-  font-family: "Overpass", sans-serif;
-}
+/* ************************************************** */
+/* ************************section-2****************** */
 
 .section-2 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.content .left-div h3 {
-  color: var(--color);
-  margin-bottom: 20px;
-  font-family: "Overpass", sans-serif;
-}
-
-p {
-  line-height: 30px;
-}
-
-.content .left-div p {
-  color: var(--text-of-head-color);
-  font-family: "Overpass", sans-serif;
 }
 
 .content .left-div div {
@@ -159,9 +166,11 @@ p {
   width: 700px;
   transform: translateX(280px);
 }
+/* ************************************************** */
+/* ************************section-3****************** */
 
 .mobile {
-  background-color: var(--color2);
+  background-color: var(--mobile-background);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -188,12 +197,16 @@ p {
 .right-mobile p {
   margin-top: 30px;
   font-weight: 200;
+  margin-left: 27px;
 }
 
-.right-mobile h1 {
+.right-mobile h2 {
   font-size: 30px;
-  color: var(--main-head-color);
+  color: var(--text-or-main-color);
 }
+
+/* ************************************************** */
+/* ************************section-3****************** */
 
 .services {
   display: flex;
@@ -207,39 +220,32 @@ p {
   flex-direction: column;
   margin-top: 50px;
 }
-.services h3 {
-  color: var(--main-head-color);
-  margin-bottom: 20px;
+
+.right-service {
+  transform: translateX(-80px);
 }
 
 .services img {
   width: 700px;
   transform: translateX(-350px);
 }
-
-.services p {
-  color: var(--text-of-head-color);
-}
+/* ************************************************** */
+/* ************************footer****************** */
 
 footer {
   padding: 60px 150px;
   min-height: 0.615em;
-  margin-bottom: 100px;
-  overflow-x: hidden;
-  background-color: hsl(237, 17%, 21%);
+  background-color: var(--footer-background);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   font-family: "Ubuntu", sans-serif;
   border-radius: 0px 100px 0px 0px;
-}
-footer div a {
-  text-decoration: none;
-  color: var(--text-color);
+  color: var(--footer-text);
 }
 
 footer div a span {
-  text-shadow: 0px 0px 5px var(--text-color);
+  text-shadow: 0px 0px 5px var(--text-or-main-color);
   display: flex;
 }
 
@@ -248,3 +254,4 @@ footer div {
   flex-direction: column;
   gap: 20px;
 }
+/* ************************************************** */
