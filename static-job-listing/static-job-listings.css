@@ -4,6 +4,7 @@
   padding: 0px;
   margin: 0px;
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 :root {

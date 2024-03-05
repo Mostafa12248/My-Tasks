@@ -12,6 +12,7 @@
     justify-content: center;
     margin: 70px auto;
     box-shadow: 0px 0px 0px var(--top-background-color-span-and-filter);
+    overflow-x: hidden;
   }
 
   section .img img {
