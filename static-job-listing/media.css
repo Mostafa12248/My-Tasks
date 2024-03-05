@@ -1,7 +1,11 @@
 @media (max-width: 415px) {
+ body {
+   overflow:hidden;
+ }
   header {
     width: 420px;
     overflow: hidden;
+    
   }
 
   section {
@@ -12,7 +16,12 @@
     justify-content: center;
     margin: 70px auto;
     box-shadow: 0px 0px 0px var(--top-background-color-span-and-filter);
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+  
+    
+>>>>>>> 24897f057581544ff2f24cec339ec08879a2936e
   }
 
   section .img img {
