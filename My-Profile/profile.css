@@ -39,6 +39,10 @@ header .nav-par a {
   transition: 0.2s;
 }
 
+header .nav-par a:focus {
+  color: #221f32;
+}
+
 footer {
   padding: 100px 150px;
   min-height: 3.125em;
