@@ -27,10 +27,6 @@ header a {
   margin-top: 0px;
 }
 
-/* header .mob {
-  display: none;
-} */
-
 section {
   padding: 40px 150px;
   min-height: 10px;
@@ -420,3 +416,4 @@ footer .left img {
   font-size: 30px;
   cursor: pointer;
 }
+/* ************************************************* */
