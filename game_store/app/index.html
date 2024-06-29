@@ -7,20 +7,123 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameHub</title>
+    <link rel="stylesheet" href="../../dist/style.css" />
   </head>
   <body>
     <main>
       <header>
         <nav>
           <div class="logo">
-            <h2>GameHub</h2>
+            <a href="index.html">GameHub</a>
+          </div>
+          <ul>
+            <li><a href="#main">Main</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="search">
+            <input type="search" placeholder="search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="log_sign">
+            <a href="#">Login</a>
+            <a href="#">Sign up</a>
           </div>
         </nav>
       </header>
+      <section class="all_games" id="main">
+        <div class="box_game">
+          <img src="./img/action/call of duty.jpeg" alt="photo" />
+          <div class="details">
+            <h2>Call Of Duty</h2>
+            <p>$350</p>
+          </div>
+          <div class="rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="more_info">
+            <a href="#">Story</a>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <!-- ************ -->
+        <div class="box_game">
+          <img src="./img/action/gow.jpeg" alt="photo" />
+          <div class="details">
+            <h2>God Of War Ragnarok</h2>
+            <p>$750</p>
+          </div>
+          <div class="rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="more_info">
+            <a href="#">Story</a>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <!-- ************ -->
+        <div class="box_game">
+          <img
+            src="./img/action/spiderman-ps4-spiderman-ps4-games-hd-wallpaper-preview.jpg"
+            alt="photo"
+          />
+          <div class="details">
+            <h2>Spider Man</h2>
+            <p>$450</p>
+          </div>
+          <div class="rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="more_info">
+            <a href="#">Story</a>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <!-- ************ -->
+        <div class="box_game">
+          <img src="./img/action/call of duty.jpeg" alt="photo" />
+          <div class="details">
+            <h2>Call of duty</h2>
+            <p>$150</p>
+          </div>
+          <div class="rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="more_info">
+            <a href="#">Story</a>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <!-- ************ -->
+      </section>
     </main>
   </body>
 </html>
