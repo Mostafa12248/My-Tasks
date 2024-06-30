@@ -7,16 +7,13 @@
 
 section {
   min-height: 50px;
-  margin: 50px 24px;
+  margin: 50px 0px;
   padding: 20px 5px;
+  overflow-x: hidden;
 }
 
-main {
-  margin: 0px 20px;
-}
 main header {
-  background-color: #4682b4;
-  border-radius: 0px 0px 20px 20px;
+  background-color: tomato;
 }
 main header nav {
   padding: 10px 20px;
@@ -211,93 +208,221 @@ main header nav .log_sign a {
 main header nav .log_sign a:hover {
   background-color: rgba(255, 255, 255, 0.686);
 }
-main .all_games {
+main .more_populer {
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+}
+main .more_populer .title h1 {
+  color: tomato;
+  background-color: white;
+  padding: 10px 0px;
+  margin: 0px 120px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+main .more_populer .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px 0px;
+}
+main .more_populer .content .right_box {
+  grid-area: right_box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+main .more_populer .content .right_box h1 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-indent: 100px;
+  font-size: 15px;
+}
+main .more_populer .content .right_box .populer_games {
+  gap: 20px 20px;
+  border-radius: 15px;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 0px 10px;
+}
+main .more_populer .content .right_box .populer_games .box-pop {
+  border-radius: 15px;
+  border: 2px solid white;
+  width: 280px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px 0px;
+}
+@media (max-width: 600px) {
+  main .more_populer .content .right_box .populer_games .box-pop {
+    flex-grow: 1;
+    margin: 0px 70px;
+  }
+}
+main .more_populer .content .right_box .populer_games .box-pop img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+main .more_populer .content .right_box .populer_games .box-pop a {
+  padding: 10px 25px;
+  outline: 2px solid black;
+  text-decoration: none;
+  border-radius: 18px;
+}
+main .more_populer .content .right_box .populer_games .box-pop:hover {
+  transform: scale(1.03);
+}
+main .left_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 30px;
+}
+main .left_box h1 {
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-top: 50px;
+  padding-left: 7px;
+}
+main .left_box .most_down {
+  width: 270px;
+  border-radius: 15px;
+  background-color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+main .left_box .most_down img {
+  width: 100px;
+  height: 80px;
+}
+main .left_box .most_down .detals_down {
+  display: flex;
+  flex-direction: column;
+  gap: 7px 0px;
+}
+main .left_box .most_down .detals_down h4 {
+  color: black;
+  font-size: 20px;
+}
+main .left_box .most_down .detals_down p {
+  font-size: 14px;
+}
+main .left_box .most_down .detals_down .rate i {
+  font-size: 12px;
+  color: gold;
+}
+main .all_games .see-more a {
+  margin: 0px 120px;
+  border-radius: 18px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: tomato;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+main .all_games .see-more a:hover {
+  opacity: 0.9;
+}
+main .all_games .total {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-top: 50px;
+  gap: 0px 20px;
   overflow: hidden;
   justify-content: center;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .all_games {
-    gap: 20px 10px;
+  main .all_games .total {
+    gap: 20px 30px;
+    padding: 20px 20px;
   }
 }
-main .all_games .box_game {
+main .all_games .total .box_game {
   margin-bottom: 20px;
   transition: all 0.3s;
   overflow: hidden;
-  box-shadow: 0px 2px 5px black;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px 0px;
   width: 300px;
-  background-color: white;
+  background-color: tomato;
   border-radius: 10px 10px 10px 10px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .all_games .box_game {
+  main .all_games .total .box_game {
     width: 230px;
     flex-grow: 1;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .all_games .box_game {
+  main .all_games .total .box_game {
     flex-grow: 1;
     width: 245px;
   }
 }
 @media (max-width: 600px) {
-  main .all_games .box_game {
+  main .all_games .total .box_game {
     width: 450px;
     flex-grow: 0;
   }
 }
-main .all_games .box_game:hover {
+main .all_games .total .box_game:hover {
   transform: scale(1.02);
   cursor: pointer;
 }
-main .all_games .box_game img {
+main .all_games .total .box_game img {
   height: 220px;
   transition: all 0.5s;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .all_games .box_game img {
+  main .all_games .total .box_game img {
     height: 180px;
   }
 }
-main .all_games .box_game img:hover {
+main .all_games .total .box_game img:hover {
   transform: scale(1.03);
 }
-main .all_games .box_game .details {
+main .all_games .total .box_game .details {
   padding: 0px 10px;
   display: flex;
   justify-content: space-between;
 }
-main .all_games .box_game .details h2 {
-  color: black;
+main .all_games .total .box_game .details h2 {
+  color: white;
   font-size: 18px;
 }
-main .all_games .box_game .details p {
+main .all_games .total .box_game .details p {
   font-size: 20px;
 }
-main .all_games .box_game .rate {
+main .all_games .total .box_game .rate {
   padding: 0px 10px;
 }
-main .all_games .box_game .rate i {
+main .all_games .total .box_game .rate i {
   color: yellow;
   font-size: 12px;
 }
-main .all_games .box_game .more_info {
+main .all_games .total .box_game .more_info {
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;
 }
-main .all_games .box_game .more_info a {
-  outline: 1px solid black;
+main .all_games .total .box_game .more_info a {
   padding: 7px 20px;
   background-color: white;
   text-decoration: none;
@@ -305,7 +430,7 @@ main .all_games .box_game .more_info a {
   color: black;
   transition: all 0.2s;
 }
-main .all_games .box_game .more_info a:hover {
+main .all_games .total .box_game .more_info a:hover {
   transform: scale(1.05);
   background-color: black;
   color: white;
@@ -497,4 +622,4 @@ main .subscript .offers .offer .price a:hover {
   background-color: #4682b4;
   color: white;
   outline: none;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
