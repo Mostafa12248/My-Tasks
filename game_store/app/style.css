@@ -1,14 +1,6 @@
-@keyframes scall {
+@keyframes rotate {
   to {
-    transform: translateX(-550px);
-  }
-}
-@keyframes scall-1 {
-  from {
-    transform: translateX(-600px);
-  }
-  to {
-    transform: translateX(0px);
+    transform: rotate(360deg);
   }
 }
 * {
@@ -22,6 +14,10 @@ section {
   min-height: 50px;
   margin: 50px 0px;
   padding: 20px 5px;
+}
+
+body {
+  background-color: rgba(255, 192, 203, 0.2549019608);
 }
 
 main header {
@@ -231,40 +227,15 @@ main .more_populer {
   background-color: tomato;
 }
 main .more_populer .content {
-  display: grid;
-  grid-template-columns: 49% 49%;
-  grid-template-areas: "left right";
+  width: 100%;
   gap: 0px 20px;
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .more_populer .content {
-    grid-template-columns: none;
-    grid-template-rows: 40% 40 main .more_populer .content;
-    grid-template-areas: "right" "left";
-    gap: 20px 0px;
-  }
-}
-@media (max-width: 600px) {
-  main .more_populer .content {
-    grid-template-columns: none;
-    grid-template-rows: 40% 40%;
-    grid-template-areas: "right" "left";
-    gap: 20px 0px;
-  }
-}
-main .more_populer .content .right_box {
   grid-area: right;
   display: flex;
   flex-direction: column;
   gap: 10px 0px;
   flex-grow: 1;
 }
-@media (min-width: 601px) and (max-width: 768px) {
-  main .more_populer .content .right_box {
-    justify-content: center;
-  }
-}
-main .more_populer .content .right_box .title {
+main .more_populer .content .title {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -275,125 +246,112 @@ main .more_populer .content .right_box .title {
   color: tomato;
   font-weight: bold;
 }
-main .more_populer .content .right_box .images {
-  height: 400px;
-  width: 100%;
+main .more_populer .content .images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
-  gap: 5px 5px;
-  background-color: white;
-  border-radius: 5px;
-}
-main .more_populer .content .right_box .images .top {
-  display: flex;
-  width: 50%;
-  height: 50%;
-  gap: 0px 5px;
-}
-main .more_populer .content .right_box .images .top img {
-  border-radius: 5px;
-  animation: infinite alternate linear 10s scall;
-  width: 100%;
-  height: 100%;
-}
-main .more_populer .content .right_box .images .buttom {
-  display: flex;
-  gap: 0px 5px;
-  width: 50%;
-  height: 50%;
-  width: 50%;
-}
-main .more_populer .content .right_box .images .buttom img {
-  border-radius: 5px;
-  animation: infinite linear alternate 10s scall-1;
-  width: 100%;
-  height: 100%;
-}
-main .more_populer .content .left_box {
-  grid-area: left;
-  gap: 30px 0px;
-  display: flex;
-  flex-direction: column;
-}
-main .more_populer .content .left_box .title-2 {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  border-radius: 15px;
-  font-size: 25px;
-  color: tomato;
-  font-weight: bold;
-}
-main .more_populer .content .left_box .box-download {
-  display: flex;
   flex-wrap: wrap;
-  gap: 7px 10px;
+  gap: 5px 15px;
   justify-content: center;
+  border-radius: 5px;
 }
-main .more_populer .content .left_box .box-download .box_detals {
-  background-color: white;
-  border-radius: 15px 15px 0px 0px;
+main .more_populer .content .images .box_game {
+  margin: 20px 0px;
+  transition: all 0.3s;
+  overflow: hidden;
+  padding-bottom: 10px;
   display: flex;
-  width: 100px;
-  flex-grow: 1;
   flex-direction: column;
   gap: 10px 0px;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .more_populer .content .left_box .box-download .box_detals {
-    width: 175px;
+  main .more_populer .content .images .box_game {
+    width: 250px;
+    flex-grow: 1;
+  }
+  main .more_populer .content .images .box_game:nth-child(4) {
+    flex-grow: 0;
+    width: 320px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .more_populer .content .left_box .box-download .box_detals {
-    width: 100px;
-    flex-wrap: wrap;
+  main .more_populer .content .images .box_game {
+    width: 245px;
+    flex-grow: 1;
   }
 }
 @media (max-width: 600px) {
-  main .more_populer .content .left_box .box-download .box_detals {
-    width: 140px;
+  main .more_populer .content .images .box_game {
+    width: 190px;
+    flex-grow: 1;
+  }
+  main .more_populer .content .images .box_game:nth-child(4) {
+    flex-grow: 0;
   }
 }
-main .more_populer .content .left_box .box-download .box_detals img {
-  overflow: hidden;
-  height: 210px;
-  border-radius: 15px 15px 0px 0px;
+main .more_populer .content .images .box_game:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .more_populer .content .left_box .box-download .box_detals img {
-    height: 190px;
-  }
+main .more_populer .content .images .box_game img {
+  height: 220px;
+  transition: all 0.5s;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .more_populer .content .left_box .box-download .box_detals img {
-    height: 150px;
+  main .more_populer .content .images .box_game img {
+    height: 180px;
   }
 }
-main .more_populer .content .left_box .box-download .box_detals .detals-1 {
+@media (max-width: 600px) {
+  main .more_populer .content .images .box_game img {
+    height: 170px;
+  }
+}
+main .more_populer .content .images .box_game img:hover {
+  transform: scale(1.03);
+}
+main .more_populer .content .images .box_game .details {
+  padding: 0px 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 5px;
 }
-main .more_populer .content .left_box .box-download .box_detals .detals-1 h3 {
-  font-size: 25px;
-  margin: 0px;
-  font-weight: 400;
+main .more_populer .content .images .box_game .details h2 {
+  color: tomato;
+  font-size: 18px;
 }
-main .more_populer .content .left_box .box-download .box_detals .detals-1 .rate {
-  font-size: 9px;
-  color: goldenrod;
+main .more_populer .content .images .box_game .details p {
+  font-size: 20px;
 }
-main .more_populer .content .left_box .box-download .box_detals p {
-  font-size: 16px;
-  padding-left: 5px;
+main .more_populer .content .images .box_game .rate {
+  padding: 0px 10px;
 }
-main .more_populer .content .left_box .box-download .box_detals p span {
-  color: goldenrod;
+main .more_populer .content .images .box_game .rate i {
+  color: yellow;
+  font-size: 12px;
+}
+main .more_populer .content .images .box_game .more_info {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+main .more_populer .content .images .box_game .more_info a {
+  padding: 7px 10px;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.2s;
+}
+main .more_populer .content .images .box_game .more_info a:hover {
+  transform: scale(1.05);
+  background-color: white;
+  outline: 2px solid black;
+  color: black;
 }
 main .all_games .see-more {
   margin: 0px 120px;
@@ -415,7 +373,6 @@ main .all_games .see-more a:hover {
 main .all_games .total {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
   margin-top: 50px;
   gap: 0px 20px;
   overflow: hidden;
@@ -441,7 +398,7 @@ main .all_games .total .box_game {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   main .all_games .total .box_game {
-    width: 230px;
+    width: 250px;
     flex-grow: 1;
   }
 }
@@ -453,8 +410,8 @@ main .all_games .total .box_game {
 }
 @media (max-width: 600px) {
   main .all_games .total .box_game {
-    width: 450px;
-    flex-grow: 0;
+    width: 170px;
+    flex-grow: 1;
   }
 }
 main .all_games .total .box_game:hover {
@@ -470,6 +427,11 @@ main .all_games .total .box_game img {
 @media (min-width: 601px) and (max-width: 768px) {
   main .all_games .total .box_game img {
     height: 180px;
+  }
+}
+@media (max-width: 600px) {
+  main .all_games .total .box_game img {
+    height: 150px;
   }
 }
 main .all_games .total .box_game img:hover {
@@ -500,7 +462,7 @@ main .all_games .total .box_game .more_info {
   justify-content: space-between;
 }
 main .all_games .total .box_game .more_info a {
-  padding: 7px 20px;
+  padding: 7px 10px;
   background-color: white;
   text-decoration: none;
   border-radius: 15px;
@@ -511,6 +473,144 @@ main .all_games .total .box_game .more_info a:hover {
   transform: scale(1.05);
   background-color: black;
   color: white;
+}
+main .sells {
+  display: flex;
+  justify-content: center;
+}
+main .sells .sell-1 {
+  padding: 50px;
+  width: 80%;
+  border-radius: 20px;
+  gap: 0px 40px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .sells .sell-1 {
+    padding: 20px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .sells .sell-1 {
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+  }
+}
+@media (max-width: 600px) {
+  main .sells .sell-1 {
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+  }
+}
+main .sells .sell-1 .details {
+  width: 300px;
+  height: 330px;
+  z-index: 10;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px 0px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .sells .sell-1 .details {
+    width: 500px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .sells .sell-1 .details {
+    width: 95%;
+  }
+}
+main .sells .sell-1 .details::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 150%;
+  top: -90px;
+  background-color: gold;
+  animation: rotate 4s ease-in infinite;
+}
+main .sells .sell-1 .details::after {
+  border-radius: 15px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background-color: tomato;
+}
+main .sells .sell-1 .details .title {
+  display: flex;
+  justify-content: center;
+}
+main .sells .sell-1 .details .title h1 {
+  background-color: white;
+  padding: 10px 105px;
+  border-radius: 0px 0px 15px 15px;
+}
+main .sells .sell-1 .details p {
+  font-size: 20px;
+  padding: 0px 25px;
+  color: white;
+  line-height: 30px;
+}
+main .sells .sell-1 .details p span {
+  font-size: 23px;
+  color: black;
+  font-weight: bold;
+}
+main .sells .sell-1 .details a {
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 80px;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  transition: all 0.4s;
+}
+main .sells .sell-1 .details a:hover {
+  background-color: white;
+  color: black;
+}
+main .sells .sell-1 .games {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  justify-content: center;
+}
+main .sells .sell-1 .games img {
+  width: 260px;
+  height: 250px;
+  border-radius: 15px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .sells .sell-1 .games img {
+    width: 200px;
+    height: 200px;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .sells .sell-1 .games img {
+    width: 200px;
+    height: 150px;
+    flex-grow: 1;
+  }
+  main .sells .sell-1 .games img:nth-child(3) {
+    flex-grow: 0;
+    width: 50%;
+  }
 }
 main .subscript {
   display: flex;
