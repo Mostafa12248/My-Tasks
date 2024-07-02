@@ -11,11 +11,11 @@ section {
 }
 
 body {
-  background-color: #ffc0cb41;
+  background-color: #6633996a;
 }
 main {
   header {
-    background-color: tomato;
+    background-color: #663399;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -189,7 +189,7 @@ main {
   }
 
   .more_populer {
-    background-color: tomato;
+    background-color: #4b0082;
     .content {
       width: 100%;
       gap: 0px 20px;
@@ -250,7 +250,7 @@ main {
           flex-direction: column;
           gap: 10px 0px;
           width: 300px;
-          background-color: white;
+          background-color: #9400d3;
           border-radius: 10px 10px 10px 10px;
           img {
             @include medium-screen {
@@ -272,7 +272,7 @@ main {
             display: flex;
             justify-content: space-between;
             h2 {
-              color: tomato;
+              color: white;
               font-size: 18px;
             }
             p {
@@ -318,7 +318,7 @@ main {
         padding: 10px 20px;
         display: flex;
         justify-content: center;
-        background-color: tomato;
+        background-color: #663399;
         text-decoration: none;
         color: white;
         font-size: 20px;
@@ -365,7 +365,7 @@ main {
         flex-direction: column;
         gap: 10px 0px;
         width: 300px;
-        background-color: tomato;
+        background-color: #66339986;
         border-radius: 10px 10px 10px 10px;
         img {
           @include medium-screen {
@@ -426,9 +426,20 @@ main {
   .sells {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0px;
+
+    margin-top: -50px;
     .sell-1 {
+      display: flex;
+      @include extra-large-screen {
+        width: 90%;
+        gap: 0px 30px;
+      }
       @include large-screen {
         padding: 20px;
+        width: 90%;
       }
       @include medium-screen {
         padding: 10px;
@@ -441,65 +452,58 @@ main {
         flex-wrap: wrap;
         gap: 20px 0px;
       }
-      padding: 50px;
-      width: 80%;
+      padding: 20px 10px;
+      width: 75%;
       border-radius: 20px;
       gap: 0px 40px;
       box-shadow: 0px 0px 10px black;
-      display: flex;
-      justify-content: center;
+      // background-color: #9400d3;
+      // background: rgb(2, 0, 36);
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(226, 0, 255, 0.8352591036414566) 0%,
+        rgba(16, 74, 72, 0.41789215686274506) 100%
+      );
+
       .details {
+        @include extra-large-screen {
+          width: 45%;
+        }
         @include large-screen {
-          width: 500px;
+          width: 50%;
         }
         @include medium-screen {
           width: 95%;
         }
-        width: 300px;
+        width: 400px;
         height: 330px;
         z-index: 10;
-        background-color: tomato;
+        background-color: white;
+        box-shadow: 0px 5px 10px black;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 50px 0px;
         border-radius: 15px;
-        position: relative;
-        overflow: hidden;
-        z-index: 10;
-        &::before {
-          z-index: -1;
-          content: "";
-          position: absolute;
-          width: 70%;
-          height: 150%;
-          top: -90px;
-          background-color: gold;
-          animation: rotate 4s ease-in infinite;
-        }
-
-        &::after {
-          border-radius: 15px;
-          z-index: -1;
-          content: "";
-          position: absolute;
-          inset: 3px;
-          background-color: tomato;
-        }
-
+        animation: rotate linear 3s infinite;
         .title {
           display: flex;
           justify-content: center;
+          position: relative;
           h1 {
-            background-color: white;
+            margin-top: 10px;
+            z-index: 20;
+            background-color: #9400d3;
             padding: 10px 105px;
-            border-radius: 0px 0px 15px 15px;
+            color: white;
+            border-radius: 15px 15px 15px 15px;
           }
         }
         p {
           font-size: 20px;
           padding: 0px 25px;
-          color: white;
+          color: black;
           line-height: 30px;
           span {
             font-size: 23px;
@@ -530,11 +534,24 @@ main {
         flex-wrap: wrap;
         gap: 10px 10px;
         justify-content: center;
+        width: 100%;
         img {
+          &:nth-child(1) {
+            transform: translateY(-60px);
+          }
+          &:nth-child(3) {
+            transform: translateY(60px);
+          }
           @include large-screen {
-            width: 200px;
-            height: 200px;
+            width: 121px;
+            height: 180px;
             flex-grow: 1;
+            &:nth-child(1) {
+              transform: translateY(-60px);
+            }
+            &:nth-child(3) {
+              transform: translateY(60px);
+            }
           }
           @include medium-screen {
             width: 200px;
@@ -545,14 +562,19 @@ main {
               width: 50%;
             }
           }
-          // flex-grow: 1;
-          width: 260px;
-          height: 250px;
+          @include extra-large-screen {
+            flex-grow: 1;
+            width: 180px;
+          }
+          flex-grow: 1;
+          width: 180px;
+          height: 220px;
           border-radius: 15px;
         }
       }
     }
   }
+
   .subscript {
     display: flex;
     justify-content: center;

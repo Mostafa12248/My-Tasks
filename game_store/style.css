@@ -1,8 +1,4 @@
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
+@keyframes rotate {}
 * {
   font-family: "Roboto", sans-serif;
   padding: 0px;
@@ -17,11 +13,11 @@ section {
 }
 
 body {
-  background-color: rgba(255, 192, 203, 0.2549019608);
+  background-color: rgba(102, 51, 153, 0.4156862745);
 }
 
 main header {
-  background-color: tomato;
+  background-color: #663399;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -224,7 +220,7 @@ main header nav .log_sign a:hover {
   background-color: rgba(255, 255, 255, 0.686);
 }
 main .more_populer {
-  background-color: tomato;
+  background-color: #4b0082;
 }
 main .more_populer .content {
   width: 100%;
@@ -264,7 +260,7 @@ main .more_populer .content .images .box_game {
   flex-direction: column;
   gap: 10px 0px;
   width: 300px;
-  background-color: white;
+  background-color: #9400d3;
   border-radius: 10px 10px 10px 10px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -321,7 +317,7 @@ main .more_populer .content .images .box_game .details {
   justify-content: space-between;
 }
 main .more_populer .content .images .box_game .details h2 {
-  color: tomato;
+  color: white;
   font-size: 18px;
 }
 main .more_populer .content .images .box_game .details p {
@@ -361,7 +357,7 @@ main .all_games .see-more a {
   padding: 10px 20px;
   display: flex;
   justify-content: center;
-  background-color: tomato;
+  background-color: #663399;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -393,7 +389,7 @@ main .all_games .total .box_game {
   flex-direction: column;
   gap: 10px 0px;
   width: 300px;
-  background-color: tomato;
+  background-color: rgba(102, 51, 153, 0.5254901961);
   border-radius: 10px 10px 10px 10px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -477,19 +473,30 @@ main .all_games .total .box_game .more_info a:hover {
 main .sells {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0px;
+  margin-top: -50px;
 }
 main .sells .sell-1 {
-  padding: 50px;
-  width: 80%;
+  display: flex;
+  padding: 20px 10px;
+  width: 75%;
   border-radius: 20px;
   gap: 0px 40px;
   box-shadow: 0px 0px 10px black;
-  display: flex;
-  justify-content: center;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(226, 0, 255, 0.8352591036) 0%, rgba(16, 74, 72, 0.4178921569) 100%);
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .sells .sell-1 {
+    width: 90%;
+    gap: 0px 30px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   main .sells .sell-1 {
     padding: 20px;
+    width: 90%;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
@@ -507,22 +514,26 @@ main .sells .sell-1 {
   }
 }
 main .sells .sell-1 .details {
-  width: 300px;
+  width: 400px;
   height: 330px;
   z-index: 10;
-  background-color: tomato;
+  background-color: white;
+  box-shadow: 0px 5px 10px black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px 0px;
   border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
+  animation: rotate linear 3s infinite;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .sells .sell-1 .details {
+    width: 45%;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   main .sells .sell-1 .details {
-    width: 500px;
+    width: 50%;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
@@ -530,37 +541,23 @@ main .sells .sell-1 .details {
     width: 95%;
   }
 }
-main .sells .sell-1 .details::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 70%;
-  height: 150%;
-  top: -90px;
-  background-color: gold;
-  animation: rotate 4s ease-in infinite;
-}
-main .sells .sell-1 .details::after {
-  border-radius: 15px;
-  z-index: -1;
-  content: "";
-  position: absolute;
-  inset: 3px;
-  background-color: tomato;
-}
 main .sells .sell-1 .details .title {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 main .sells .sell-1 .details .title h1 {
-  background-color: white;
+  margin-top: 10px;
+  z-index: 20;
+  background-color: #9400d3;
   padding: 10px 105px;
-  border-radius: 0px 0px 15px 15px;
+  color: white;
+  border-radius: 15px 15px 15px 15px;
 }
 main .sells .sell-1 .details p {
   font-size: 20px;
   padding: 0px 25px;
-  color: white;
+  color: black;
   line-height: 30px;
 }
 main .sells .sell-1 .details p span {
@@ -588,17 +585,31 @@ main .sells .sell-1 .games {
   flex-wrap: wrap;
   gap: 10px 10px;
   justify-content: center;
+  width: 100%;
 }
 main .sells .sell-1 .games img {
-  width: 260px;
-  height: 250px;
+  flex-grow: 1;
+  width: 180px;
+  height: 220px;
   border-radius: 15px;
+}
+main .sells .sell-1 .games img:nth-child(1) {
+  transform: translateY(-60px);
+}
+main .sells .sell-1 .games img:nth-child(3) {
+  transform: translateY(60px);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   main .sells .sell-1 .games img {
-    width: 200px;
-    height: 200px;
+    width: 121px;
+    height: 180px;
     flex-grow: 1;
+  }
+  main .sells .sell-1 .games img:nth-child(1) {
+    transform: translateY(-60px);
+  }
+  main .sells .sell-1 .games img:nth-child(3) {
+    transform: translateY(60px);
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
@@ -610,6 +621,12 @@ main .sells .sell-1 .games img {
   main .sells .sell-1 .games img:nth-child(3) {
     flex-grow: 0;
     width: 50%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .sells .sell-1 .games img {
+    flex-grow: 1;
+    width: 180px;
   }
 }
 main .subscript {
