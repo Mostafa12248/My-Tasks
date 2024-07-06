@@ -1,4 +1,145 @@
 @keyframes rotate {}
+.main-pes13 {
+  background-color: white;
+}
+.main-pes13 .all {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+  margin: 50px 80px;
+}
+.main-pes13 .all .download-title {
+  display: flex;
+  align-items: start;
+  gap: 0px 20px;
+}
+.main-pes13 .all .download-title .title {
+  background-color: #9400d3;
+  width: 30%;
+  padding: 20px;
+  border-radius: 15px;
+  line-height: 1.5;
+  color: white;
+  transform: skewX(2deg);
+}
+.main-pes13 .all .download-title .story {
+  font-size: 18px;
+  background-color: #9400d3;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 15px;
+  line-height: 1.5;
+  color: white;
+  transform: skewX(2deg);
+}
+.main-pes13 .all .download-title .story h1 {
+  background-color: white;
+  padding: 5px 15px;
+  color: black;
+  width: 170px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.main-pes13 .all .all_info {
+  display: flex;
+  gap: 0px 40px;
+}
+.main-pes13 .all .all_info .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+  width: 40%;
+}
+.main-pes13 .all .all_info .info .info-download {
+  height: 40%;
+  background-color: #9400d3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+.main-pes13 .all .all_info .info .info-download .download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.main-pes13 .all .all_info .info .info-download .download p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-pes13 .all .all_info .info .info-download .download i {
+  color: #9400d3;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: wheat;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-pes13 .all .all_info .info .info-download .download:hover {
+  cursor: pointer;
+}
+.main-pes13 .all .all_info .info .info-download .download-detals ul {
+  padding: 20px;
+  display: flex;
+  gap: 0px 40px;
+  justify-content: center;
+  font-size: 18px;
+}
+.main-pes13 .all .all_info .info .info-download .download-detals ul li {
+  color: white;
+  list-style-type: square;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.main-pes13 .all .all_info .info .info-download .download-detals ul li span {
+  color: wheat;
+}
+.main-pes13 .all .all_info .info .request-play {
+  background-color: #9400d3;
+  border-radius: 15px;
+  padding: 20px;
+}
+.main-pes13 .all .all_info .info .request-play h2 {
+  font-size: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.main-pes13 .all .all_info .info .request-play ul {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  line-height: 2;
+}
+.main-pes13 .all .all_info .info .request-play ul li {
+  color: #9400d3;
+}
+.main-pes13 .all .all_info .info .request-play ul li span {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main-pes13 .all .all_info .imges {
+  width: 100%;
+}
+.main-pes13 .all .all_info .imges img {
+  width: 100%;
+}
+.main-pes13 .all .all_info .imges .small img {
+  width: 150px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   padding: 0px;
@@ -551,6 +692,9 @@ main .sells {
   overflow-x: scroll;
   margin-top: -50px;
   padding: 20px 40px;
+}
+main .sells::-webkit-scrollbar {
+  height: 0px;
 }
 main .sells .sell-1 {
   transition: all 0.5s;
