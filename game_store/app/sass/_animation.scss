@@ -1,2 +1,6 @@
 @keyframes rotate {
+  to {
+    transform: translateX(-1400px);
+    opacity: 0;
+  }
 }

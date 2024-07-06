@@ -425,40 +425,23 @@ main {
 
   .sells {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px 0px;
-
+    gap: 20px 40px;
+    overflow-x: scroll;
     margin-top: -50px;
+    padding: 20px 40px;
     .sell-1 {
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.02);
+      }
       display: flex;
-      @include extra-large-screen {
-        width: 90%;
-        gap: 0px 30px;
-      }
-      @include large-screen {
-        padding: 20px;
-        width: 90%;
-      }
-      @include medium-screen {
-        padding: 10px;
-        flex-wrap: wrap;
-        gap: 20px 0px;
-      }
-
-      @include small-screen {
-        padding: 10px;
-        flex-wrap: wrap;
-        gap: 20px 0px;
-      }
-      padding: 20px 10px;
-      width: 75%;
+      padding: 20px 40px;
       border-radius: 20px;
-      gap: 0px 40px;
+      gap: 0px 20px;
       box-shadow: 0px 0px 10px black;
-      // background-color: #9400d3;
-      // background: rgb(2, 0, 36);
+      height: 210px;
       background: linear-gradient(
         90deg,
         rgba(2, 0, 36, 1) 0%,
@@ -467,26 +450,15 @@ main {
       );
 
       .details {
-        @include extra-large-screen {
-          width: 45%;
-        }
-        @include large-screen {
-          width: 50%;
-        }
-        @include medium-screen {
-          width: 95%;
-        }
         width: 400px;
-        height: 330px;
-        z-index: 10;
+        min-height: 70px;
         background-color: white;
         box-shadow: 0px 5px 10px black;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px 0px;
+        gap: 12px 0px;
         border-radius: 15px;
-        animation: rotate linear 3s infinite;
         .title {
           display: flex;
           justify-content: center;
@@ -495,14 +467,15 @@ main {
             margin-top: 10px;
             z-index: 20;
             background-color: #9400d3;
-            padding: 10px 105px;
+            padding: 5px 70px;
             color: white;
-            border-radius: 15px 15px 15px 15px;
+            border-radius: 60px;
           }
         }
+
         p {
-          font-size: 20px;
-          padding: 0px 25px;
+          font-size: 14px;
+          padding: 0px 20px;
           color: black;
           line-height: 30px;
           span {
@@ -515,15 +488,15 @@ main {
         a {
           text-decoration: none;
           background-color: white;
-          padding: 10px 80px;
+          padding: 5px 30px;
           border-radius: 20px;
           font-size: 18px;
           background-color: black;
           color: white;
           transition: all 0.4s;
           &:hover {
-            background-color: white;
-            color: black;
+            background-color: #9400d3;
+            color: white;
           }
         }
       }
@@ -536,40 +509,11 @@ main {
         justify-content: center;
         width: 100%;
         img {
-          &:nth-child(1) {
-            transform: translateY(-60px);
-          }
-          &:nth-child(3) {
-            transform: translateY(60px);
-          }
-          @include large-screen {
-            width: 121px;
-            height: 180px;
-            flex-grow: 1;
-            &:nth-child(1) {
-              transform: translateY(-60px);
-            }
-            &:nth-child(3) {
-              transform: translateY(60px);
-            }
-          }
-          @include medium-screen {
-            width: 200px;
-            height: 150px;
-            flex-grow: 1;
-            &:nth-child(3) {
-              flex-grow: 0;
-              width: 50%;
-            }
-          }
-          @include extra-large-screen {
-            flex-grow: 1;
-            width: 180px;
-          }
           flex-grow: 1;
-          width: 180px;
-          height: 220px;
+          width: 80px;
+          height: 120px;
           border-radius: 15px;
+          transform: skewY(10deg);
         }
       }
     }

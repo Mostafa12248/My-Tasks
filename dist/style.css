@@ -1,4 +1,9 @@
-@keyframes rotate {}
+@keyframes rotate {
+  to {
+    transform: translateX(-1400px);
+    opacity: 0;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   padding: 0px;
@@ -472,74 +477,36 @@ main .all_games .total .box_game .more_info a:hover {
 }
 main .sells {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px 0px;
+  gap: 20px 40px;
+  overflow-x: scroll;
   margin-top: -50px;
+  padding: 20px 40px;
 }
 main .sells .sell-1 {
+  transition: all 0.5s;
   display: flex;
-  padding: 20px 10px;
-  width: 75%;
+  padding: 20px 40px;
   border-radius: 20px;
-  gap: 0px 40px;
+  gap: 0px 20px;
   box-shadow: 0px 0px 10px black;
+  height: 210px;
   background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgba(226, 0, 255, 0.8352591036) 0%, rgba(16, 74, 72, 0.4178921569) 100%);
 }
-@media (min-width: 1025px) and (max-width: 1200px) {
-  main .sells .sell-1 {
-    width: 90%;
-    gap: 0px 30px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .sells .sell-1 {
-    padding: 20px;
-    width: 90%;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .sells .sell-1 {
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 20px 0px;
-  }
-}
-@media (max-width: 600px) {
-  main .sells .sell-1 {
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 20px 0px;
-  }
+main .sells .sell-1:hover {
+  transform: scale(1.02);
 }
 main .sells .sell-1 .details {
   width: 400px;
-  height: 330px;
-  z-index: 10;
+  min-height: 70px;
   background-color: white;
   box-shadow: 0px 5px 10px black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px 0px;
+  gap: 12px 0px;
   border-radius: 15px;
-  animation: rotate linear 3s infinite;
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  main .sells .sell-1 .details {
-    width: 45%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .sells .sell-1 .details {
-    width: 50%;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .sells .sell-1 .details {
-    width: 95%;
-  }
 }
 main .sells .sell-1 .details .title {
   display: flex;
@@ -550,13 +517,13 @@ main .sells .sell-1 .details .title h1 {
   margin-top: 10px;
   z-index: 20;
   background-color: #9400d3;
-  padding: 10px 105px;
+  padding: 5px 70px;
   color: white;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 60px;
 }
 main .sells .sell-1 .details p {
-  font-size: 20px;
-  padding: 0px 25px;
+  font-size: 14px;
+  padding: 0px 20px;
   color: black;
   line-height: 30px;
 }
@@ -568,7 +535,7 @@ main .sells .sell-1 .details p span {
 main .sells .sell-1 .details a {
   text-decoration: none;
   background-color: white;
-  padding: 10px 80px;
+  padding: 5px 30px;
   border-radius: 20px;
   font-size: 18px;
   background-color: black;
@@ -576,8 +543,8 @@ main .sells .sell-1 .details a {
   transition: all 0.4s;
 }
 main .sells .sell-1 .details a:hover {
-  background-color: white;
-  color: black;
+  background-color: #9400d3;
+  color: white;
 }
 main .sells .sell-1 .games {
   display: flex;
@@ -589,45 +556,10 @@ main .sells .sell-1 .games {
 }
 main .sells .sell-1 .games img {
   flex-grow: 1;
-  width: 180px;
-  height: 220px;
+  width: 80px;
+  height: 120px;
   border-radius: 15px;
-}
-main .sells .sell-1 .games img:nth-child(1) {
-  transform: translateY(-60px);
-}
-main .sells .sell-1 .games img:nth-child(3) {
-  transform: translateY(60px);
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .sells .sell-1 .games img {
-    width: 121px;
-    height: 180px;
-    flex-grow: 1;
-  }
-  main .sells .sell-1 .games img:nth-child(1) {
-    transform: translateY(-60px);
-  }
-  main .sells .sell-1 .games img:nth-child(3) {
-    transform: translateY(60px);
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .sells .sell-1 .games img {
-    width: 200px;
-    height: 150px;
-    flex-grow: 1;
-  }
-  main .sells .sell-1 .games img:nth-child(3) {
-    flex-grow: 0;
-    width: 50%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  main .sells .sell-1 .games img {
-    flex-grow: 1;
-    width: 180px;
-  }
+  transform: skewY(10deg);
 }
 main .subscript {
   display: flex;
