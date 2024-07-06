@@ -188,6 +188,48 @@ main {
     }
   }
 
+  .news {
+    @include small-screen {
+      transform: translateY(118px);
+      margin: 0px 10px;
+    }
+    @include large-screen {
+      transform: translateY(110px);
+    }
+    @include medium-screen {
+      transform: translateY(110px);
+    }
+    transform: translateY(70px);
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0px 40px;
+    border-radius: 20px;
+    position: relative;
+    color: black;
+    span {
+      color: #4b0082;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &::before {
+      content: "News";
+      position: absolute;
+      height: 100%;
+      width: 80px;
+      background-color: #9400d3;
+      right: 0;
+      color: white;
+      display: flex;
+      z-index: 10;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0px 20px 20px 0px;
+    }
+  }
+
   .more_populer {
     background-color: #4b0082;
     .content {
@@ -206,7 +248,7 @@ main {
         padding: 10px 15px;
         border-radius: 15px;
         font-size: 25px;
-        color: tomato;
+        color: #663399;
         font-weight: bold;
       }
       .images {
@@ -234,10 +276,6 @@ main {
           @include small-screen {
             width: 190px;
             flex-grow: 1;
-            &:nth-child(4) {
-              flex-grow: 0;
-              // width: 260px;
-            }
           }
           transition: all 0.3s;
           &:hover {
@@ -307,10 +345,38 @@ main {
           }
         }
       }
+      .change {
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 50px;
+        span {
+          &:nth-child(2) {
+            color: black;
+          }
+          color: white;
+          font-size: 19px;
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
+        }
+
+        i {
+          font-size: 30px;
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 
   .all_games {
+    margin-top: 70px;
     .see-more {
       margin: 0px 120px;
       a {
@@ -523,13 +589,17 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: white;
+    margin: -50px 0px;
     .title {
+      margin-top: 40px;
       h1 {
         text-align: center;
         font-size: 40px;
         text-transform: capitalize;
-        color: #4682b4;
-        text-shadow: 0px 8px 6px black;
+        color: #4b0082;
+        letter-spacing: 3px;
+        text-shadow: 0px 8px 5px #9400d3;
         margin-bottom: 100px;
       }
     }
@@ -553,6 +623,7 @@ main {
           transform: none;
         }
       }
+
       .offer {
         @include large-screen {
           width: 306px;
@@ -567,8 +638,7 @@ main {
         width: 370px;
         border-radius: 15px;
         padding: 10px 10px;
-        box-shadow: 0px 2px 5px #4682b4;
-        border: 2px solid #4682b4;
+        box-shadow: 0px 2px 5px black;
         display: flex;
         flex-direction: column;
         gap: 20px 0px;
@@ -580,7 +650,7 @@ main {
           text-align: center;
           font-size: 40px;
           text-transform: capitalize;
-          color: #4682b4;
+          color: #4b0082;
         }
         .option-no {
           font-size: 15px;
@@ -652,7 +722,7 @@ main {
           text-align: center;
           p {
             font-size: 35px;
-            color: #4682b4;
+            color: #4b0082;
             margin-bottom: 40px;
           }
           a {
@@ -670,7 +740,7 @@ main {
             border-radius: 15px;
             transition: all 0.5s;
             &:hover {
-              background-color: #4682b4;
+              background-color: #663399;
               color: white;
               outline: none;
             }
