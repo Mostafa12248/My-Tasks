@@ -1,143 +1,162 @@
 @keyframes rotate {}
 .main-pes13 {
-  background-color: white;
+  background-color: #f5f7f8;
 }
-.main-pes13 .all {
+.main-pes13 .game-content {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 50px 0px;
-  margin: 50px 80px;
+  gap: 40px 0px;
+  margin: 55px 80px;
 }
-.main-pes13 .all .download-title {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-pes13 .game-content {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .main-pes13 .game-content {
+    margin: 55px 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main-pes13 .game-content {
+    margin: 55px 10px;
+  }
+}
+.main-pes13 .game-content .game-info {
   display: flex;
-  align-items: start;
-  gap: 0px 20px;
+  justify-content: space-around;
+  gap: 0px 70px;
 }
-.main-pes13 .all .download-title .title {
-  background-color: #9400d3;
-  width: 30%;
-  padding: 20px;
-  border-radius: 15px;
-  line-height: 1.5;
-  color: white;
-  transform: skewX(2deg);
+@media (min-width: 601px) and (max-width: 768px) {
+  .main-pes13 .game-content .game-info {
+    flex-wrap: wrap;
+    gap: 40px 0px;
+  }
 }
-.main-pes13 .all .download-title .story {
-  font-size: 18px;
-  background-color: #9400d3;
+@media (max-width: 600px) {
+  .main-pes13 .game-content .game-info {
+    flex-wrap: wrap;
+    gap: 40px 0px;
+    margin-top: 70px;
+  }
+}
+.main-pes13 .game-content .game-info .game-details {
+  width: 70%;
+  padding: 30px;
+  background-color: #eeedeb;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-pes13 .game-content .game-info .game-details {
+    width: 55%;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main-pes13 .game-content .game-info .game-details {
+    width: 100%;
+    padding: 30px 3px;
+  }
+}
+@media (max-width: 600px) {
+  .main-pes13 .game-content .game-info .game-details {
+    width: 100%;
+    padding: 30px 3px;
+  }
+}
+.main-pes13 .game-content .game-info .game-details .video video {
   width: 100%;
-  padding: 10px 20px;
-  border-radius: 15px;
-  line-height: 1.5;
-  color: white;
-  transform: skewX(2deg);
 }
-.main-pes13 .all .download-title .story h1 {
-  background-color: white;
-  padding: 5px 15px;
-  color: black;
-  width: 170px;
-  border-radius: 20px;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.main-pes13 .all .all_info {
+.main-pes13 .game-content .game-info .game-details .images {
   display: flex;
-  gap: 0px 40px;
+  gap: 10px;
 }
-.main-pes13 .all .all_info .info {
+.main-pes13 .game-content .game-info .game-details .images img {
+  width: 20px;
+  height: auto;
+  flex-grow: 1;
+}
+.main-pes13 .game-content .game-info .game-order {
+  width: 30%;
   display: flex;
   flex-direction: column;
+  background-color: #eeedeb;
+  align-self: flex-start;
   gap: 20px 0px;
-  width: 40%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+  position: sticky;
+  top: 80px;
 }
-.main-pes13 .all .all_info .info .info-download {
-  height: 40%;
-  background-color: #9400d3;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-pes13 .game-content .game-info .game-order {
+    top: 120px;
+  }
 }
-.main-pes13 .all .all_info .info .info-download .download {
+@media (min-width: 601px) and (max-width: 768px) {
+  .main-pes13 .game-content .game-info .game-order {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .main-pes13 .game-content .game-info .game-order {
+    width: 100%;
+  }
+}
+.main-pes13 .game-content .game-info .game-order .game-name h1 {
+  font-size: 40px;
+}
+.main-pes13 .game-content .game-info .game-order .game-salary p {
+  font-size: 30px;
+}
+.main-pes13 .game-content .game-info .game-order .game-preorder {
+  width: 100%;
+  background-color: #5a639c;
+  padding: 10px 0px;
+  font-size: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: white;
-  margin: 10px 20px;
-  padding: 20px;
-  border-radius: 15px;
-}
-.main-pes13 .all .all_info .info .info-download .download p {
-  font-size: 20px;
-  font-weight: bold;
-}
-.main-pes13 .all .all_info .info .info-download .download i {
-  color: #9400d3;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: wheat;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  border-radius: 10px;
+  transition: all 0.3s;
 }
-.main-pes13 .all .all_info .info .info-download .download:hover {
+.main-pes13 .game-content .game-info .game-order .game-preorder:hover {
+  opacity: 0.8;
+}
+.main-pes13 .game-content .game-info .game-order .game-preorder a {
+  padding: 0px 150px;
+  text-decoration: none;
+  color: white;
+}
+.main-pes13 .game-content .game-info .game-order .type {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.main-pes13 .game-content .game-info .game-order .type label {
+  display: inline-block;
+  margin-bottom: 7px;
+}
+.main-pes13 .game-content .game-info .game-order .type select {
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+  background-color: #7776b3;
+  font-size: 17px;
+  border-radius: 7px;
+  color: white;
+}
+.main-pes13 .game-content .game-info .game-order .type select:hover {
   cursor: pointer;
 }
-.main-pes13 .all .all_info .info .info-download .download-detals ul {
-  padding: 20px;
-  display: flex;
-  gap: 0px 40px;
-  justify-content: center;
-  font-size: 18px;
+.main-pes13 .game-content .game-story h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
 }
-.main-pes13 .all .all_info .info .info-download .download-detals ul li {
-  color: white;
-  list-style-type: square;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-.main-pes13 .all .all_info .info .info-download .download-detals ul li span {
-  color: wheat;
-}
-.main-pes13 .all .all_info .info .request-play {
-  background-color: #9400d3;
-  border-radius: 15px;
-  padding: 20px;
-}
-.main-pes13 .all .all_info .info .request-play h2 {
-  font-size: 20px;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.main-pes13 .all .all_info .info .request-play ul {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  background-color: white;
-  border-radius: 10px;
+.main-pes13 .game-content .game-story p {
   line-height: 2;
-}
-.main-pes13 .all .all_info .info .request-play ul li {
-  color: #9400d3;
-}
-.main-pes13 .all .all_info .info .request-play ul li span {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-.main-pes13 .all .all_info .imges {
-  width: 100%;
-}
-.main-pes13 .all .all_info .imges img {
-  width: 100%;
-}
-.main-pes13 .all .all_info .imges .small img {
-  width: 150px;
 }
 
 * {
@@ -153,10 +172,9 @@ section {
   padding: 20px 5px;
 }
 
-body {
+main {
   background-color: rgba(102, 51, 153, 0.4156862745);
 }
-
 main header {
   background-color: #663399;
   position: fixed;
