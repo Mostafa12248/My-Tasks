@@ -631,7 +631,7 @@ main .all_games .total .box_game .details .rate {
 }
 main .all_games .total .box_game .details .rate i {
   color: yellow;
-  font-size: 12px;
+  font-size: 8px;
 }
 main .all_games .total .box_game .more_info {
   padding: 0px 10px;
@@ -680,15 +680,18 @@ main .more_populer .content .title {
   font-size: 25px;
   color: #663399;
   font-weight: bold;
+  margin: 0px 20px;
 }
 main .more_populer .content .images {
   display: flex;
   flex-direction: row;
   overflow: hidden;
   flex-wrap: wrap;
-  gap: 5px 15px;
+  gap: 10px 20px;
   justify-content: center;
   border-radius: 5px;
+  margin: 20px 0px;
+  padding: 0px 20px;
 }
 main .more_populer .content .images .box_game {
   margin: 20px 0px;
@@ -709,7 +712,7 @@ main .more_populer .content .images .box_game {
   }
   main .more_populer .content .images .box_game:nth-child(4) {
     flex-grow: 0;
-    width: 320px;
+    width: 380px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
@@ -764,7 +767,7 @@ main .more_populer .content .images .box_game .rate {
 }
 main .more_populer .content .images .box_game .rate i {
   color: yellow;
-  font-size: 12px;
+  font-size: 7px;
 }
 main .more_populer .content .images .box_game .more_info {
   padding: 10px 10px;
@@ -820,6 +823,7 @@ main .more_populer .content .change i:hover {
 }
 main .more_populer .content-2 {
   width: 100%;
+  margin: 0px 20px;
   gap: 0px 20px;
   grid-area: right;
   display: flex;
@@ -829,6 +833,26 @@ main .more_populer .content-2 {
   position: absolute;
   top: 20px;
   left: 1600px;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .more_populer .content-2 {
+    left: 1200px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .more_populer .content-2 {
+    left: 1100px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .more_populer .content-2 {
+    left: 900px;
+  }
+}
+@media (max-width: 600px) {
+  main .more_populer .content-2 {
+    left: 700px;
+  }
 }
 main .more_populer .content-2 .title {
   background-color: white;
@@ -840,6 +864,7 @@ main .more_populer .content-2 .title {
   font-size: 25px;
   color: #663399;
   font-weight: bold;
+  margin: 0px 20px;
 }
 main .more_populer .content-2 .images {
   display: flex;
@@ -849,6 +874,8 @@ main .more_populer .content-2 .images {
   gap: 5px 15px;
   justify-content: center;
   border-radius: 5px;
+  padding: 0px 20px;
+  margin: 20px 0px;
 }
 main .more_populer .content-2 .images .box_game {
   margin: 20px 0px;
@@ -924,7 +951,7 @@ main .more_populer .content-2 .images .box_game .rate {
 }
 main .more_populer .content-2 .images .box_game .rate i {
   color: yellow;
-  font-size: 12px;
+  font-size: 7px;
 }
 main .more_populer .content-2 .images .box_game .more_info {
   padding: 10px 10px;

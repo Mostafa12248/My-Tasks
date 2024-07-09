@@ -400,7 +400,7 @@ main {
             padding: 0px;
             i {
               color: yellow;
-              font-size: 12px;
+              font-size: 8px;
             }
           }
         }
@@ -435,7 +435,6 @@ main {
     &::-webkit-scrollbar {
       height: 0px;
     }
-
     .content {
       width: 100%;
       gap: 0px 20px;
@@ -454,15 +453,18 @@ main {
         font-size: 25px;
         color: #663399;
         font-weight: bold;
+        margin: 0px 20px;
       }
       .images {
         display: flex;
         flex-direction: row;
         overflow: hidden;
         flex-wrap: wrap;
-        gap: 5px 15px;
+        gap: 10px 20px;
         justify-content: center;
         border-radius: 5px;
+        margin: 20px 0px;
+        padding: 0px 20px;
         .box_game {
           margin: 20px 0px;
           @include large-screen {
@@ -470,7 +472,7 @@ main {
             flex-grow: 1;
             &:nth-child(4) {
               flex-grow: 0;
-              width: 320px;
+              width: 380px;
             }
           }
           @include medium-screen {
@@ -525,7 +527,7 @@ main {
             padding: 0px 10px;
             i {
               color: yellow;
-              font-size: 12px;
+              font-size: 7px;
             }
           }
 
@@ -588,6 +590,7 @@ main {
 
     .content-2 {
       width: 100%;
+      margin: 0px 20px;
       gap: 0px 20px;
       grid-area: right;
       display: flex;
@@ -597,6 +600,19 @@ main {
       position: absolute;
       top: 20px;
       left: 1600px;
+      @include extra-large-screen {
+        left: 1200px;
+      }
+      @include large-screen {
+        left: 1100px;
+      }
+      @include medium-screen {
+        left: 900px;
+      }
+
+      @include small-screen {
+        left: 700px;
+      }
       .title {
         background-color: white;
         display: flex;
@@ -607,6 +623,7 @@ main {
         font-size: 25px;
         color: #663399;
         font-weight: bold;
+        margin: 0px 20px;
       }
       .images {
         display: flex;
@@ -616,6 +633,8 @@ main {
         gap: 5px 15px;
         justify-content: center;
         border-radius: 5px;
+        padding: 0px 20px;
+        margin: 20px 0px;
         .box_game {
           margin: 20px 0px;
           @include large-screen {
@@ -678,7 +697,7 @@ main {
             padding: 0px 10px;
             i {
               color: yellow;
-              font-size: 12px;
+              font-size: 7px;
             }
           }
 
