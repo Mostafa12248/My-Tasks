@@ -191,6 +191,7 @@ main {
     background-color: #4b0082;
     position: relative;
     padding: 80px 0px 0px;
+    width: 100%;
     @include large-screen {
       margin-top: 100px;
     }
@@ -339,7 +340,6 @@ main {
       }
       overflow: hidden;
       justify-content: center;
-
       .box_game {
         margin-bottom: 20px;
         @include large-screen {
@@ -383,6 +383,9 @@ main {
           }
         }
         .details {
+          @include small-screen {
+            flex-wrap: wrap;
+          }
           padding: 0px 10px;
           display: flex;
           justify-content: space-between;
@@ -393,27 +396,29 @@ main {
           p {
             font-size: 20px;
           }
-        }
-        .rate {
-          padding: 0px 10px;
-          i {
-            color: yellow;
-            font-size: 12px;
+          .rate {
+            padding: 0px;
+            i {
+              color: yellow;
+              font-size: 12px;
+            }
           }
         }
         .more_info {
-          padding: 10px 10px;
+          padding: 0px 10px;
           display: flex;
           justify-content: space-between;
           a {
+            text-align: center;
+            width: 100%;
             padding: 7px 10px;
             background-color: white;
             text-decoration: none;
             border-radius: 15px;
             color: black;
-            transition: all 0.2s;
+            transition: all 0.3s;
             &:hover {
-              transform: scale(1.05);
+              transform: scale(1.02);
               background-color: black;
               color: white;
             }
@@ -425,6 +430,12 @@ main {
 
   .more_populer {
     background-color: #4b0082;
+    position: relative;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      height: 0px;
+    }
+
     .content {
       width: 100%;
       gap: 0px 20px;
@@ -506,9 +517,9 @@ main {
               color: white;
               font-size: 18px;
             }
-            p {
-              font-size: 20px;
-            }
+          }
+          p {
+            font-size: 20px;
           }
           .rate {
             padding: 0px 10px;
@@ -517,6 +528,7 @@ main {
               font-size: 12px;
             }
           }
+
           .more_info {
             padding: 10px 10px;
             display: flex;
@@ -527,9 +539,11 @@ main {
               text-decoration: none;
               border-radius: 15px;
               color: white;
-              transition: all 0.2s;
+              transition: all 0.5s;
+              width: 100%;
+              text-align: center;
               &:hover {
-                transform: scale(1.05);
+                transform: scale(1.03);
                 background-color: white;
                 outline: 2px solid black;
                 color: black;
@@ -545,15 +559,174 @@ main {
         justify-content: center;
         align-items: center;
         gap: 0px 50px;
-        span {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 19px;
+          transition: all 0.5s;
           &:nth-child(2) {
             color: black;
           }
-          color: white;
-          font-size: 19px;
           &:hover {
             color: black;
             cursor: pointer;
+          }
+          &:active {
+            transition: all 3s;
+          }
+        }
+
+        i {
+          font-size: 30px;
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .content-2 {
+      width: 100%;
+      gap: 0px 20px;
+      grid-area: right;
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0px;
+      flex-grow: 1;
+      position: absolute;
+      top: 20px;
+      left: 1600px;
+      .title {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 25px;
+        border-radius: 15px;
+        font-size: 25px;
+        color: #663399;
+        font-weight: bold;
+      }
+      .images {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 5px 15px;
+        justify-content: center;
+        border-radius: 5px;
+        .box_game {
+          margin: 20px 0px;
+          @include large-screen {
+            width: 250px;
+            flex-grow: 1;
+            &:nth-child(4) {
+              flex-grow: 0;
+              width: 320px;
+            }
+          }
+          @include medium-screen {
+            width: 245px;
+            flex-grow: 1;
+          }
+          @include small-screen {
+            width: 190px;
+            flex-grow: 1;
+          }
+          transition: all 0.3s;
+          &:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+          }
+          overflow: hidden;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px 0px;
+          width: 300px;
+          background-color: #9400d3;
+          border-radius: 10px 10px 10px 10px;
+          img {
+            @include medium-screen {
+              height: 180px;
+            }
+            @include small-screen {
+              height: 170px;
+            }
+            height: 220px;
+            transition: all 0.5s;
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+            &:hover {
+              transform: scale(1.03);
+            }
+          }
+          .details {
+            padding: 0px 10px;
+            display: flex;
+            justify-content: space-between;
+            h2 {
+              color: white;
+              font-size: 18px;
+            }
+          }
+          p {
+            font-size: 20px;
+          }
+          .rate {
+            padding: 0px 10px;
+            i {
+              color: yellow;
+              font-size: 12px;
+            }
+          }
+
+          .more_info {
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            a {
+              width: 100%;
+              padding: 7px 10px;
+              background-color: black;
+              text-decoration: none;
+              border-radius: 15px;
+              color: white;
+              transition: all 0.5s;
+              text-align: center;
+              &:hover {
+                transform: scale(1.03);
+                background-color: white;
+                outline: 2px solid black;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+
+      .change {
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 50px;
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 19px;
+          transition: all 0.5s;
+          &:nth-child(3) {
+            color: black;
+          }
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
+          &:active {
+            transition: all 3s;
           }
         }
 
