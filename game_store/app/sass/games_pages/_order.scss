@@ -1,0 +1,281 @@
+.main-pes13 {
+  background-color: #f5f7f8;
+  .game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0px;
+    margin: 55px 80px;
+    @include large-screen {
+      margin-top: 100px;
+    }
+    @include small-screen {
+      margin: 55px 10px;
+    }
+    @include medium-screen {
+      margin: 55px 10px;
+    }
+    .game-info {
+      @include large-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+      @include medium-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+      @include small-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+        margin-top: 70px;
+      }
+      display: flex;
+      justify-content: space-around;
+      gap: 0px 70px;
+      .game-details {
+        @include large-screen {
+          width: 100%;
+        }
+        @include medium-screen {
+          width: 100%;
+          padding: 30px 3px;
+        }
+        @include small-screen {
+          width: 100%;
+          padding: 30px 3px;
+        }
+        width: 70%;
+        padding: 30px;
+        background-color: #eeedeb;
+        display: flex;
+        flex-direction: column;
+        .video {
+          video {
+            width: 100%;
+          }
+        }
+
+        .images {
+          display: flex;
+          gap: 10px;
+          img {
+            width: 20px;
+            height: auto;
+            flex-grow: 1;
+          }
+        }
+      }
+
+      .important-info {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 20px 0px;
+        @include large-screen {
+          width: 100%;
+        }
+        @include medium-screen {
+          width: 100%;
+        }
+        @include small-screen {
+          width: 100%;
+        }
+        .game-order {
+          display: flex;
+          flex-direction: column;
+          background-color: #eeedeb;
+          padding: 20px 10px;
+          border-radius: 10px;
+          box-shadow: 0 0 5px black;
+          gap: 20px 0px;
+          @include large-screen {
+            top: 120px;
+          }
+          .game-name {
+            h1 {
+              font-size: 30px;
+            }
+          }
+          .game-salary {
+            p {
+              font-size: 30px;
+            }
+          }
+          .game-preorder {
+            width: 100%;
+            background-color: #5a639c;
+            padding: 10px 0px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 0.8;
+            }
+            a {
+              padding: 0px 150px;
+              text-decoration: none;
+              color: white;
+            }
+          }
+          .type {
+            width: 100%;
+            margin-bottom: 50px;
+            label {
+              display: inline-block;
+              margin-bottom: 7px;
+            }
+            select {
+              width: 100%;
+              padding: 10px 0px;
+              border: none;
+              background-color: #7776b3;
+              font-size: 17px;
+              border-radius: 7px;
+              color: white;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .game-require {
+          background-color: #eeedeb;
+          padding: 20px;
+          box-shadow: 0px 0px 5px black;
+          border-radius: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          h1 {
+            text-align: center;
+            font-size: 15px;
+            background-color: #5a639c;
+            padding: 10px;
+            color: white;
+            border-radius: 7px;
+          }
+
+          ul {
+            list-style: none;
+            margin-top: 20px;
+            line-height: 2;
+            li {
+              padding-bottom: 10px;
+              font-size: 15px;
+              span {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    .game-notes {
+      display: flex;
+      gap: 0px 70px;
+      @include large-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+      @include medium-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+
+      @include small-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+
+      .game-story {
+        @include large-screen {
+          width: 100%;
+        }
+
+        @include medium-screen {
+          width: 100%;
+        }
+
+        @include small-screen {
+          width: 100%;
+        }
+        background-color: #eeedeb;
+        width: 70%;
+        padding: 30px;
+        h1 {
+          margin-bottom: 20px;
+          font-size: 30px;
+          flex-grow: 1;
+        }
+        p {
+          line-height: 2;
+        }
+      }
+
+      .game-rate {
+        @include large-screen {
+          width: 100%;
+          padding: 20px 0px;
+        }
+        @include medium-screen {
+          width: 100%;
+          padding: 20px 0px;
+        }
+        @include small-screen {
+          width: 100%;
+          padding: 20px 0px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px 0px;
+        width: 30%;
+        background-color: #eeedeb;
+        box-shadow: 0px 0px 5px black;
+        border-radius: 15px;
+        .user {
+          padding: 0px 20px;
+          display: flex;
+          gap: 0px 20px;
+          i {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            width: 80px;
+            height: 80px;
+            background-color: #5a639c;
+            border-radius: 50%;
+          }
+          .user-comment {
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px 10px;
+
+            h3 {
+              font-weight: bold;
+              margin-bottom: 10px;
+              font-size: 13px;
+              text-transform: capitalize;
+            }
+            p {
+              font-size: 15px;
+              margin-bottom: 10px;
+            }
+            span {
+              align-self: end;
+              font-size: 12px;
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
