@@ -480,7 +480,7 @@ main {
             flex-grow: 1;
           }
           @include small-screen {
-            width: 190px;
+            width: 172px;
             flex-grow: 1;
           }
           transition: all 0.3s;
@@ -611,7 +611,7 @@ main {
       }
 
       @include small-screen {
-        left: 700px;
+        left: 400px;
       }
       .title {
         background-color: white;
@@ -650,7 +650,7 @@ main {
             flex-grow: 1;
           }
           @include small-screen {
-            width: 190px;
+            width: 170px;
             flex-grow: 1;
           }
           transition: all 0.3s;
